@@ -1,0 +1,9 @@
+return {
+  {
+    "sphamba/smear-cursor.nvim",
+    opts = {
+      never_draw_over_target = true,
+      hide_target_hack = false,
+    },
+  },
+}

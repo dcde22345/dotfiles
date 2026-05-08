@@ -1,0 +1,9 @@
+font-family = ""
+font-family = "Hack Nerd Font Mono"
+font-family = "Sarasa Term TC"
+font-style = "Bold"
+font-size = 16
+background = #222222
+background-opacity = 0.7
+background-blur = macos-glass-regular
+mouse-shift-capture = false
