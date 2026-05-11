@@ -178,6 +178,7 @@ install_packages() {
   brew_install_if_missing tmux
   brew_install_if_missing neovim
   brew_install_if_missing fd
+  brew_install_if_missing imagemagick
   install_im_select
   install_tpm
   install_catppuccin_tmux
