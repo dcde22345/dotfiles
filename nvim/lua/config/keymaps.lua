@@ -4,6 +4,17 @@
 
 local map = vim.keymap.set
 
+-- Delete/change without clobbering the unnamed/system clipboard registers.
+-- Yank still copies normally; delete/change always go to the black-hole register.
+map({ "n", "x" }, "d", '"_d', { desc = "Delete without yanking" })
+map({ "n", "x" }, "D", '"_D', { desc = "Delete to line end without yanking" })
+map({ "n", "x" }, "c", '"_c', { desc = "Change without yanking" })
+map({ "n", "x" }, "C", '"_C', { desc = "Change to line end without yanking" })
+map({ "n", "x" }, "x", '"_x', { desc = "Delete char without yanking" })
+map({ "n", "x" }, "X", '"_X', { desc = "Delete char backward without yanking" })
+map({ "n", "x" }, "s", '"_s', { desc = "Substitute without yanking" })
+map({ "n", "x" }, "S", '"_S', { desc = "Substitute line without yanking" })
+
 -- Fallback mappings for moving lines/selections when Alt/Option combos are not
 -- reliably forwarded by the terminal emulator.
 map("n", "<A-Down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
