@@ -1,0 +1,4 @@
+
+# Claude credentials / MCP config — never commit
+.claude/.credentials.json
+.claude/.mcp.json
