@@ -1,0 +1,9 @@
+# Runtime and generated files — managed by Claude Code, not tracked
+*
+!.gitignore
+!CLAUDE.md
+!skills/
+!skills/**
+
+# Third-party skill with its own git repo — re-clone separately, do not track
+skills/notebooklm/

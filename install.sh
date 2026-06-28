@@ -200,7 +200,10 @@ install_configs() {
   link_path "$DOTFILES_DIR/ghostty/config.ghostty" "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
   link_path "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
   link_path "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
-  link_path "$DOTFILES_DIR/hank-memory/AGENTS.md" "$HOME/.claude.md"
+  mkdir -p "$HOME/.claude"
+  link_path "$DOTFILES_DIR/.claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+  link_path "$DOTFILES_DIR/.claude/skills" "$HOME/.claude/skills"
+  link_path "$DOTFILES_DIR/hank-memory/develop-guide.md" "$HOME/.claude/develop-guide.md"
 }
 
 main() {
