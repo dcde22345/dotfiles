@@ -170,6 +170,15 @@ install_catppuccin_tmux() {
   fi
 }
 
+install_claude_code() {
+  if command -v claude >/dev/null 2>&1; then
+    log "Claude Code is already installed"
+  else
+    log "Installing Claude Code"
+    curl -fsSL https://claude.ai/install.sh | bash
+  fi
+}
+
 install_packages() {
   ensure_homebrew
   brew update
@@ -184,12 +193,14 @@ install_packages() {
   install_catppuccin_tmux
   brew_install_cask_if_missing font-hack-nerd-font
   brew_install_cask_if_missing font-sarasa-gothic
+  install_claude_code
 }
 
 install_configs() {
   link_path "$DOTFILES_DIR/ghostty/config.ghostty" "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
   link_path "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
   link_path "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
+  link_path "$DOTFILES_DIR/hank-memory/AGENTS.md" "$HOME/.claude.md"
 }
 
 main() {
