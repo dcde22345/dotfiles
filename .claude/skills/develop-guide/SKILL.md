@@ -1,7 +1,6 @@
 ---
 name: develop-guide
-description: Ticket-driven development workflow for yh_web and other projects under hank_tsai
-type: skill
+description: Ticket-driven development workflow for yh_web and other projects under hank_tsai. Use when fetching tickets from Plane, deciding whether to fork subagents per ticket, implementing tickets layer-by-layer (migration → service → API → UI), monitoring/recovering background subagents, or reviewing the resulting PRs.
 ---
 
 # Development Guide

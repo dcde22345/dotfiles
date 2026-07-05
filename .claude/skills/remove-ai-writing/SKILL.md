@@ -54,6 +54,33 @@ Phrases like "充分說明"、"充分體現"、"充分驗證" appear repeatedly.
 
 **Fix**: Delete the adverb. "說明"、"體現"、"驗證" carry the meaning alone.
 
+### Pattern 8 — 總結式連接詞濫用（Overused Summarizing Connectives）
+Summarizing or importance-signaling openers like "整體而言"、"綜上所述"、"綜合而言"、"綜合上述"、"由此可知"、"總而言之"、"總的來說"、"值得注意的是" appear at the head of paragraph after paragraph. One genuine synthesis sentence is fine; the same opener recurring at every paragraph or section boundary becomes a mechanical tic that signals AI drafting. Empty importance markers like "值得注意的是" are especially weak when the sentence has not yet stated what is surprising, limiting, or analytically important.
+
+**Fix**: Keep at most one — the single instance that genuinely closes an argument. For the rest, delete the connective and let the sentence start with its own substance (e.g., "綜合而言，本研究結果支持以 local level model…" → "本研究結果支持以 local level model…"). Delete "值得注意的是" if removing it changes no content; keep or rewrite it only when it marks a real contrast, limitation, or non-obvious implication. Never use two summarizing openers within the same section.
+
+**Before (空泛提示詞)**:
+> 值得注意的是，在 State-Space Model 中，狀態變數無法直接觀測。
+
+**After**:
+> State-Space Model 中的狀態變數無法直接觀測。
+
+### Pattern 9 — 模稜兩可的雙向結論（Non-Committal / Two-Sided Findings）
+A finding hedges in both directions at once: "表現不佳可能是因為 X；但若 Y 成立，則有可能變好。" By giving the positive reading and the negative reading equal weight, the sentence commits to nothing, and the reader finishes the paragraph without a conclusion. This is **false balance**, not the bounded hedging that academic writing legitimately uses. It is most damaging in findings, discussion summaries, and conclusion paragraphs — exactly where the reader expects the author to take a position.
+
+**Fix**: Commit to the single direction the evidence actually supports, and state it plainly. If a counter-possibility genuinely matters, **demote** it — move it to limitations or future work as a bounded caveat, not as a co-equal clause inside the finding. A finding sentence should end knowing which way it points.
+
+**Before (假平衡)**:
+> Random Forest 的表現可能因資料稀疏而較差，但若未來資料量增加，其非線性建模能力也可能使表現超越 local level model。
+
+**After (表態 + 降級)**:
+> 在現有資料規模下，Random Forest 的樣本外表現不及 local level model。其非線性建模能力能否在更大資料量下展現，留待未來研究檢驗。
+
+### Pattern 10 — 過度分段（Over-Segmentation / Paragraph Fragmentation）
+AI drafts tend to break prose into many short paragraphs — often one or two sentences each — giving every minor point its own block. The result is a staccato rhythm where no paragraph develops a complete idea, and the logical links between consecutive points get lost: the reader has to reconstruct why one block follows the next. In LaTeX this shows up as a blank line inserted between sentences that actually belong to the same argument. This is distinct from the inverse problem (uniformly long paragraphs); here the failure is fragmentation.
+
+**Fix**: Merge fragments that serve the same claim into one paragraph built around a topic sentence plus its supporting and qualifying sentences. A paragraph should carry one complete point with its evidence, not a single orphan sentence. Start a new paragraph only when the topic genuinely shifts. Watch especially for a finding sentence, its evidence, and its implication being split across three separate blocks when they form one argument.
+
 ---
 
 ## Scanning Procedure
