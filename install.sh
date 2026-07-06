@@ -203,7 +203,7 @@ install_configs() {
   mkdir -p "$HOME/.claude"
   link_path "$DOTFILES_DIR/.claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
   link_path "$DOTFILES_DIR/.claude/skills" "$HOME/.claude/skills"
-  link_path "$DOTFILES_DIR/hank-memory/develop-guide.md" "$HOME/.claude/develop-guide.md"
+  link_path "$DOTFILES_DIR/.claude/skills/develop-guide/SKILL.md" "$HOME/.claude/develop-guide.md"
 }
 
 main() {

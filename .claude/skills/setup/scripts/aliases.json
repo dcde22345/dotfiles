@@ -1,0 +1,9 @@
+{
+  "_comment": "Maps a bare tool name / keyword that a skill references (without the mcp__server__tool prefix) to the MCP server that provides it. This lets scan.py detect implicit MCP dependencies. Add an entry whenever a skill turns out to need a server the regex couldn't catch.",
+  "search_graph": "codebase-memory-mcp",
+  "trace_path": "codebase-memory-mcp",
+  "get_code_snippet": "codebase-memory-mcp",
+  "query_graph": "codebase-memory-mcp",
+  "get_architecture": "codebase-memory-mcp",
+  "index_repository": "codebase-memory-mcp"
+}

@@ -14,10 +14,13 @@ HOME_DIR="$TMP_DIR/home"
 DOTFILES_FIXTURE="$TMP_DIR/dotfiles"
 BACKUP_DIR="$TMP_DIR/backups"
 
-mkdir -p "$HOME_DIR" "$DOTFILES_FIXTURE/ghostty" "$DOTFILES_FIXTURE/tmux" "$DOTFILES_FIXTURE/nvim"
+mkdir -p "$HOME_DIR" "$DOTFILES_FIXTURE/ghostty" "$DOTFILES_FIXTURE/tmux" "$DOTFILES_FIXTURE/nvim" \
+  "$DOTFILES_FIXTURE/.claude/skills/develop-guide"
 touch "$DOTFILES_FIXTURE/ghostty/config.ghostty"
 touch "$DOTFILES_FIXTURE/tmux/.tmux.conf"
 touch "$DOTFILES_FIXTURE/nvim/init.lua"
+touch "$DOTFILES_FIXTURE/.claude/CLAUDE.md"
+touch "$DOTFILES_FIXTURE/.claude/skills/develop-guide/SKILL.md"
 
 HOME="$HOME_DIR" \
 DOTFILES_DIR="$DOTFILES_FIXTURE" \
@@ -44,3 +47,6 @@ assert_link() {
 assert_link "$HOME_DIR/Library/Application Support/com.mitchellh.ghostty/config.ghostty" "$DOTFILES_FIXTURE/ghostty/config.ghostty"
 assert_link "$HOME_DIR/.tmux.conf" "$DOTFILES_FIXTURE/tmux/.tmux.conf"
 assert_link "$HOME_DIR/.config/nvim" "$DOTFILES_FIXTURE/nvim"
+assert_link "$HOME_DIR/.claude/CLAUDE.md" "$DOTFILES_FIXTURE/.claude/CLAUDE.md"
+assert_link "$HOME_DIR/.claude/skills" "$DOTFILES_FIXTURE/.claude/skills"
+assert_link "$HOME_DIR/.claude/develop-guide.md" "$DOTFILES_FIXTURE/.claude/skills/develop-guide/SKILL.md"

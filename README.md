@@ -13,13 +13,13 @@ Managed configs:
 Install packages and link configs:
 
 ```sh
-~/dotfiles/install.sh
+~/Desktop/dotfiles/install.sh
 ```
 
 Only create symlinks:
 
 ```sh
-~/dotfiles/install.sh --link-only
+~/Desktop/dotfiles/install.sh --link-only
 ```
 
 Existing files or directories are moved to `~/.config-backups/<timestamp>` before symlinks are created.
